@@ -15,7 +15,9 @@ const Authform = () => {
             <Auth providers={["google"]} supabaseClient={supabase}
                 appearance={{
                     theme: ThemeSupa, style: {
-                        input: { color: 'white' },
+                        input: { color: 'white', paddingLeft: '1rem', paddingRight: '8rem', borderRadius: '0.4rem' },
+                        button: { color: 'black', fontWeight: 'bold', borderRadius: '0.4rem' },
+                        anchor: { color: '#00BD9B', },
 
 
                     },

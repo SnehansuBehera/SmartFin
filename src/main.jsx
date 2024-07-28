@@ -8,12 +8,14 @@ import Home from './pages/Home.jsx'
 import Dashboard from './components/Dashboard.jsx'
 import PrivateRoutes from './assets/PrivateRoutes.jsx'
 
+
 const Root = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<App />}>
         <Route path='' element={<Home />} />
+
         <Route path='' element={<PrivateRoutes />}>
           <Route path='/dashboard' element={<Dashboard />} />
         </Route>

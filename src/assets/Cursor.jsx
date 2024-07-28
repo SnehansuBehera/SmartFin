@@ -21,7 +21,7 @@ const CursorAnimation = ({ show }) => {
         <>
             {show &&
                 <div
-                    className="fixed pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 bg-transparent transition-all duration-75 rounded-full w-[2rem] h-[2rem] shadow-[0_0_25px_10px_rgba(0,189,155,0.5)]"
+                    className="fixed pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 bg-transparent transition-all ring-1 ring-[#00BD9B] duration-75 rounded-full w-[2rem] h-[2rem]"
                     style={{
                         top: `${position.y}px`,
                         left: `${position.x}px`

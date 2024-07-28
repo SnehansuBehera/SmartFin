@@ -3,6 +3,7 @@ import Modal from '../assets/Modal';
 import Authform from './Authform';
 import { supabase } from '../supabaseClient';
 import CursorAnimation from '../assets/Cursor'
+import { useNavigate } from 'react-router';
 
 
 
@@ -10,7 +11,7 @@ import CursorAnimation from '../assets/Cursor'
 
 const Navbar = ({ setToken }) => {
 
-
+    const navigate = useNavigate();
     const [cursorVisible, setCursorVisible] = useState(true);
     const [modalVisible, setModalVisible] = useState(false);
     const [session, setSession] = useState(null);
@@ -22,17 +23,25 @@ const Navbar = ({ setToken }) => {
 
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
-            setSession(session)
-        })
-        if (session) {
             setSession(session);
+        });
 
-            setModalVisible(false);
-        }
+        const { data: authListener } = supabase.auth.onAuthStateChange(
+            (_event, session) => {
+                setSession(session);
+                if (session) {
+                    setModalVisible(false);
 
 
-    }, [session])
+                }
+            }
+        );
 
+        return () => {
+            authListener.subscription.unsubscribe();
+        };
+    }, []);
+    console.log(session);
 
     return (
         <>

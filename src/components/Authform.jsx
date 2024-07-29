@@ -12,7 +12,7 @@ const Authform = () => {
     return (
         <div>
 
-            <Auth providers={["google"]} supabaseClient={supabase}
+            <Auth providers={["github", "google"]} supabaseClient={supabase}
                 appearance={{
                     theme: ThemeSupa, style: {
                         input: { color: 'white', paddingLeft: '1rem', paddingRight: '8rem', borderRadius: '0.4rem' },

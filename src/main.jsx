@@ -15,7 +15,6 @@ const Root = () => {
     createRoutesFromElements(
       <Route path='/' element={<App />}>
         <Route path='' element={<Home />} />
-
         <Route path='' element={<PrivateRoutes />}>
           <Route path='/dashboard' element={<Dashboard />} />
         </Route>

@@ -47,7 +47,7 @@ const Landing = () => {
     return (
         <div className='relative'>
             <CursorAnimation show={cursorVisible} />
-            <div className='flex max-w-[1200px] mx-auto justify-between mt-20 mb-32'>
+            <div className='flex max-w-[1200px] mx-auto justify-between mt-20 mb-24'>
                 <div className='flex flex-col items-start w-[45rem] gap-7'>
                     <div className='flex flex-col gap-6'>
                         <h1

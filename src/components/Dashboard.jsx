@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Sidebar from './Sidebar'
 import { supabase } from '../supabaseClient';
-import BodySpace from './BodySpace';
+
+import Budget from './BodySpace';
 
 
 const Dashboard = () => {
@@ -23,7 +24,7 @@ const Dashboard = () => {
                     </div>
 
                 </div>
-                <BodySpace />
+                <Budget />
 
             </div>
         </div>

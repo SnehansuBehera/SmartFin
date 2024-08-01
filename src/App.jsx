@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom"
-
+import { ApolloProvider } from '@apollo/react-hooks';
+import client from './ApolloClient';
 function App() {
 
 
   return (
-    <main>
-      <Outlet />
-    </main>
+    <ApolloProvider client={client}>
+      <main>
+        <Outlet />
+      </main>
+    </ApolloProvider>
+
   )
 }
 
